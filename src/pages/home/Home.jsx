@@ -29,6 +29,7 @@ export default function Home() {
     const getUserStats = async () => {
       try {
         const res = await userRequest.get("/users/stats");
+        // eslint-disable-next-line
         res.data.map((item) => {
           setUserStats((prev) => [
             ...prev,
