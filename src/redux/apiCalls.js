@@ -44,8 +44,10 @@ export const getProducts = async (dispatch) => {
 export const deleteProduct = async (id, dispatch) => {
   dispatch(deleteProductStart());
   try {
+    // eslint-disable-next-line
     const res = await userRequest.delete(`/products/${id}`);
     // console.log(res.data["products"]);
+
     dispatch(deleteProductSuccess(id));
   } catch (error) {
     dispatch(deleteProductFailure());
@@ -54,7 +56,9 @@ export const deleteProduct = async (id, dispatch) => {
 export const updateProduct = async (id, product, dispatch) => {
   dispatch(updateProductStart({ id, product }));
   try {
+    // eslint-disable-next-line
     const res = await userRequest.put(`/products/${id}`);
+
     // console.log(res.data["products"]);
     dispatch(updateProductSuccess(id));
   } catch (error) {
