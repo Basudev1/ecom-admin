@@ -19,6 +19,13 @@ export const login = async (dispatch, user) => {
   try {
     const res = await publicRequest.post("/auth/login", user);
     // console.log(user);
+    console.log(res.data.isAdmin);
+    if (res.data.isAdmin) {
+      localStorage.setItem("Authorization", res.data.token);
+      localStorage.setItem("userId", res.data.userId);
+      localStorage.setItem("isAdmin", res.data.isAdmin);
+      window.location.href = "/";
+    }
     dispatch(loginSuccess(res.data));
   } catch (error) {
     dispatch(loginFailure());

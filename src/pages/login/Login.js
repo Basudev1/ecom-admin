@@ -26,14 +26,14 @@ function Login() {
         style={{ padding: 10, marginBottom: 10 }}
         name="email"
         type="email"
-        defaultValue="Email"
+        // defaultValue="Email"
         placeholder="Email"
         onChange={(e) => setEmail(e.target.value)}
       />
       <input
         style={{ padding: 10, marginBottom: 10 }}
         type="password"
-        defaultValue="Password"
+        // defaultValue="Password"
         name="password"
         placeholder="Password"
         onChange={(e) => setPassword(e.target.value)}
