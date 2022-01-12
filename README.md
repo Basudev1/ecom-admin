@@ -1,5 +1,9 @@
 # Getting Started with Create React App
 
+## This is the part of MERN full stack Ecommerce App
+
+# This project contains the Admin Panel for the App
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
